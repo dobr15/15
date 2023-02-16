@@ -12,21 +12,21 @@ int main() {
     map <int, int>  street; 
     int n;
 
-    cout << " Êîëè÷åñòâî äîìîâ íà óëèöå:"; 
+    cout << " ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¤Ã®Ã¬Ã®Ã¢ Ã­Ã  Ã³Ã«Ã¨Ã¶Ã¥:"; 
     cin >> n;      
-    cout << " Äîì è ñêîëüêî â íåì æèâåò ëşäåé: " << endl;  
+    cout << " Ã„Ã®Ã¬ Ã¨ Ã±ÃªÃ®Ã«Ã¼ÃªÃ® Ã¢ Ã­Ã¥Ã¬ Ã¦Ã¨Ã¢Ã¥Ã² Ã«Ã¾Ã¤Ã¥Ã©: " << endl;  
 
     for (int i = 1; i <= n; i++) 
 {
         int house, people;
-        cout << i << ") Äîì ";
+        cout << i << ") Ã„Ã®Ã¬ ";
         cin >> house; 
         cin >> people;  
         street.insert(make_pair(house, people));
     }
 
     int f;
-    cout << endl << "Êîëè÷åñòâî îïåğàöèé: ";
+    cout << endl << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã®Ã¯Ã¥Ã°Ã Ã¶Ã¨Ã©: ";
     cin >> f;
 
     for (int i = 1; i < f; i++) {
@@ -35,33 +35,33 @@ int main() {
 
         if (a == 0) { 
             int house;
-            cout << "Óêàæèòå íîìåğ äîìà: ";
+            cout << "Ã“ÃªÃ Ã¦Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã¤Ã®Ã¬Ã : ";
             cin >> house;
             if (street.count(house)) {
-                cout << "Êîëè÷åñòâî ëşäåé: " << street[house] << endl;
+                cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã«Ã¾Ã¤Ã¥Ã©: " << street[house] << endl;
             }
             else {
-                cout << "Òàêîãî äîìà íå ñóùåñòâóåò! " << endl;
+                cout << "Ã’Ã ÃªÃ®Ã£Ã® Ã¤Ã®Ã¬Ã  Ã­Ã¥ Ã±Ã³Ã¹Ã¥Ã±Ã²Ã¢Ã³Ã¥Ã²! " << endl;
             }
         }
         if (a == 1) 
         {
             int deleter;
-            cout << "Êàêîé äîì óäàëèòü: ";  cin >> deleter;
+            cout << "ÃŠÃ ÃªÃ®Ã© Ã¤Ã®Ã¬ Ã³Ã¤Ã Ã«Ã¨Ã²Ã¼: ";  cin >> deleter;
             if (street.find(deleter) == street.end()) {
-                cout << "Åãî íåò â ñïèñêå, âîçìîæíî óæå ğàçğóøåí :)";
+                cout << "Ã…Ã£Ã® Ã­Ã¥Ã² Ã¢ Ã±Ã¯Ã¨Ã±ÃªÃ¥, Ã¢Ã®Ã§Ã¬Ã®Ã¦Ã­Ã® Ã³Ã¦Ã¥ Ã°Ã Ã§Ã°Ã³Ã¸Ã¥Ã­ :)";
             }
             else {
                 street.erase(street.find(deleter));
-                cout << "Îí óäàëåí! " << endl;
+                cout << "ÃÃ­ Ã³Ã¤Ã Ã«Ã¥Ã­! " << endl;
             }
         }
 
         if (a == 2) 
         { 
             int house, people;
-            cout << "Êàêîé äîì äîáàâèòü: "; cin >> house;
-            cout << "Êàêîå êîëè÷åñòâî ëşäåé òàì ïğîæèâàåò: "; cin >> people;
+            cout << "ÃŠÃ ÃªÃ®Ã© Ã¤Ã®Ã¬ Ã¤Ã®Ã¡Ã Ã¢Ã¨Ã²Ã¼: "; cin >> house;
+            cout << "ÃŠÃ Ã®Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã«Ã¾Ã¤Ã¥Ã© Ã²Ã Ã¬ Ã¯Ã°Ã®Ã¦Ã¨Ã¢Ã Ã¥Ã²: "; cin >> people;
             street[house] = people;
         }
     }
